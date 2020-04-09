@@ -61,6 +61,7 @@ class Newgem < Thor::Group
     template "gemfiles/rubocop.gemfile"
     return unless rails?
 
+    template "gemfiles/jruby.gemfile"
     template "gemfiles/rails5.gemfile"
     template "gemfiles/rails6.gemfile"
     template "gemfiles/railsmaster.gemfile"
