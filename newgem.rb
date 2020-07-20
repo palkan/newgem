@@ -32,6 +32,7 @@ class Newgem < Thor::Group
     LICENSE.txt
     Rakefile
     README.md
+    RELEASING.md
   ).freeze
 
   COPY_DIRS = %w(
