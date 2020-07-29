@@ -27,6 +27,7 @@ class Newgem < Thor::Group
     .rspec
     .rubocop-md.yml
     .rubocop.yml
+    lefthook.yml
     CHANGELOG.md
     Gemfile
     LICENSE.txt
