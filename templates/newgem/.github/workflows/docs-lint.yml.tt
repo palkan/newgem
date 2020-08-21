@@ -23,7 +23,7 @@ jobs:
     - name: Run Markdown linter
       run: |
         gem install mdl
-        mdl *.md
+        mdl **/*.md
   rubocop:
     runs-on: ubuntu-latest
     steps:
@@ -54,7 +54,7 @@ jobs:
     - name: Install Forspell
       run: gem install forspell
     - name: Run Forspell
-      run: forspell *.md
+      run: forspell **/*.md .github/**/*.md
   liche:
     runs-on: ubuntu-latest
     env:
