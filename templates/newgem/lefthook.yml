@@ -3,6 +3,7 @@ pre-commit:
     mdl:
       tags: style
       glob: "**/*.md"
+      exclude: ".github/*"
       run: mdl {staged_files}
     liche:
       tags: links
