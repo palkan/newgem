@@ -53,17 +53,23 @@ class Newgem < Thor::Group
 
   def copy_files
     COPY_FILES.each { |file| template file }
+
+    remove_file "lefthook.yml" unless docslint?
   end
 
   def copy_dirs
     COPY_DIRS.each { |dir| directory(dir) }
+
+    remove_file ".github/workflows/docs-lint.yml" unless docslint?
+    remove_file ".github/workflows/rspec-jruby.yml" unless jruby?
   end
 
   def copy_gemfiles
     template "gemfiles/rubocop.gemfile"
     return unless rails?
 
-    template "gemfiles/jruby.gemfile"
+    template "gemfiles/jruby.gemfile" if jruby?
+
     template "gemfiles/rails5.gemfile"
     template "gemfiles/rails6.gemfile"
     template "gemfiles/railsmaster.gemfile"
@@ -83,6 +89,14 @@ class Newgem < Thor::Group
 
   def rails?
     @rails ||= yes?("Need Rails stuff?")
+  end
+
+  def jruby?
+    @jruby ||= yes?("Need JRuby stuff?")
+  end
+
+  def docslint?
+    @docslint ||= yes?("Need docs lint stuff?")
   end
 
   def module_name
