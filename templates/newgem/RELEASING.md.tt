@@ -28,6 +28,14 @@ git push
 ```
 
 3. Release a gem.
+<%- if ruby_next? %>
+
+```sh
+make release
+```
+
+Under the hood we generated pre-transpiled files with Ruby Next and use [gem-release](https://github.com/svenfuchs/gem-release) to publish a gem. Then, a Git tag is created and pushed to the remote repo.
+<%- else -%>
 
 ```sh
 gem release -t
@@ -41,3 +49,4 @@ gem release -t
 ```
 
 Don't forget to push tags and write release notes on GitHub (if necessary).
+<% end %>

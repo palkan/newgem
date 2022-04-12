@@ -85,18 +85,34 @@ class Newgem < Thor::Group
     template "newgem.gemspec", "#{name}.gemspec"
   end
 
+  def create_makefile
+    template "Makefile", "Makefile"
+  end
+
   private
 
   def rails?
-    @rails ||= yes?("Need Rails stuff?")
+    return @rails if instance_variable_defined?(:@rails)
+
+    @rails = yes?("Need Rails stuff?")
+  end
+
+  def ruby_next?
+    return @ruby_next if instance_variable_defined?(:@ruby_next)
+
+    @ruby_next = yes?("Use Ruby Next transpiler?")
   end
 
   def jruby?
-    @jruby ||= yes?("Need JRuby stuff?")
+    return @jruby if instance_variable_defined?(:@jruby)
+
+    @jruby = yes?("Need JRuby stuff?")
   end
 
   def docslint?
-    @docslint ||= yes?("Need docs lint stuff?")
+    return @docslint if instance_variable_defined?(:@docslint)
+
+    @docslint = yes?("Need docs lint stuff?")
   end
 
   def module_name

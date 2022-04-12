@@ -4,7 +4,11 @@ begin
   require "pry-byebug"
 rescue LoadError
 end
+<%- if ruby_next? -%>
 
+require "ruby-next/language/runtime" unless ENV["CI"] -%>
+
+<%- end -%>
 <%- if rails? -%>
 ENV["RAILS_ENV"] = "test"
 
