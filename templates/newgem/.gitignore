@@ -33,7 +33,7 @@ spec/dummy/tmp/
 
 Gemfile.lock
 Gemfile.local
-.rspec
+.rspec-local
 .ruby-version
 *.gem
 

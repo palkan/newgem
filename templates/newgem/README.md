@@ -27,7 +27,7 @@ gem "<%= name %>"
 
 ### Supported Ruby versions
 
-- Ruby (MRI) >= 2.5.0
+- Ruby (MRI) >= 2.7.0
 - JRuby >= 9.2.9
 
 ## Usage
@@ -37,6 +37,10 @@ TBD
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/palkan/<%= name %>](https://github.com/palkan/<%= name %>).
+
+## Credis
+
+This gem is generated via [new-gem-generator](https://github.com/palkan/new-gem-generator).
 
 ## License
 
