@@ -1,0 +1,6 @@
+use_github = yes? "Do you plan to host your code on GitHub?"
+
+if use_github
+  repo_name = ask("What's the GitHub repo for the project? (\"<org>/<name>\")")
+  github_user = ask("What's your GitHub username? (for issue templates)")
+end

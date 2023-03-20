@@ -1,6 +1,0 @@
-# frozen_string_literal: true
-
-require "<%= name_path %>/version"
-<%- if rails? -%>
-require "<%= name_path %>/railtie" if defined?(Rails::Railtie)
-<%- end -%>

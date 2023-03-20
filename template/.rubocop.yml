@@ -1,0 +1,31 @@
+require:
+  - standard
+
+inherit_gem:
+  standard: config/base.yml
+
+<% if use_rspec %>
+inherit_from:
+  - .rubocop/rspec.yml
+<% end %>
+
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'tmp/**/*'
+    - 'Gemfile'
+    - 'vendor/**/*'
+    - 'gemfiles/**/*'
+    - 'lib/.rbnext/**/*'
+    - 'lib/generators/**/templates/*.rb'
+    - '.github/**/*'
+  DisplayCopNames: true
+  SuggestExtensions: false
+  NewCops: disable
+  TargetRubyVersion: 2.7
+
+Standard/BlockSingleLineBraces:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true

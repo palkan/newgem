@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+<% if use_ruby_next %>
+
+require "ruby-next"
+
+require "ruby-next/language/setup"
+RubyNext::Language.setup_gem_load_path(transpile: true)
+<% end %>
+
+require "<%= name_path %>/version"
+<% if use_rails %>
+require "<%= name_path %>/railtie" if defined?(Rails::Railtie)
+<% end %>

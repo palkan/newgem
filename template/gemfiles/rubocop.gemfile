@@ -1,0 +1,9 @@
+source "https://rubygems.org" do
+  <% if lint_docs %>
+  gem "rubocop-md", "~> 1.0"
+  <% end %>
+  <% if use_rspec %>
+  gem "rubocop-rspec"
+  <% end %>
+  gem "standard", "~> 1.0"
+end

@@ -1,0 +1,1 @@
+lint_docs = yes? "Would you like to install documentation linting tools (mdlint, rubocop markdown, forspell)?"

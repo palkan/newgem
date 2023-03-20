@@ -1,0 +1,14 @@
+use_rspec = false
+
+loop do
+  testing_library = ask("Which library do you want to use for testing? RSpec (1), Minitest (2)") || ""
+
+  testing_library = testing_library.chomp
+
+  if %w[1 2].include?(testing_library)
+    use_rspec = testing_library == "1"
+    break
+  else
+    say "Please, choose 1 or 2"
+  end
+end

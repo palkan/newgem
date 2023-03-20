@@ -1,0 +1,6 @@
+use_ga = yes? "Would you like to configure GitHub Actions?"
+
+if use_ga
+  use_jruby = yes? "Do you want to run tests against JRuby? (Recommended)"
+end
+
