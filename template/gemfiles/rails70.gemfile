@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 7.0"
-# TODO: Update to 2.0 when 7.2 is out
+gem "rails", "~> 7.0.0"
 gem "sqlite3", "~> 1.4"
 
 gemspec path: ".."

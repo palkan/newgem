@@ -62,6 +62,7 @@ inside(root_dir) do
   if use_ga
     file ".github/workflows/test.yml", <%= code(".github/workflows/test.yml") %>
     file ".github/workflows/rubocop.yml", <%= code(".github/workflows/rubocop.yml") %>
+    file ".github/workflows/release.yml", <%= code(".github/workflows/release.yml") %>
 
     if lint_docs
       file ".github/workflows/docs-lint.yml", <%= code(".github/workflows/docs-lint.yml") %>
@@ -73,6 +74,8 @@ inside(root_dir) do
 
     if use_rails
       file "gemfiles/rails6.gemfile", <%= code("gemfiles/rails6.gemfile") %>
+      file "gemfiles/rails70.gemfile", <%= code("gemfiles/rails70.gemfile") %>
+      file "gemfiles/rails71.gemfile", <%= code("gemfiles/rails71.gemfile") %>
       file "gemfiles/rails7.gemfile", <%= code("gemfiles/rails7.gemfile") %>
       file "gemfiles/railsmain.gemfile", <%= code("gemfiles/railsmain.gemfile") %>
     end
