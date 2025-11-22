@@ -1,10 +1,24 @@
-require:
-  - standard
+inherit_mode:
+  merge:
+    - Exclude
+
+plugins:
+  - standard-custom
+  - standard-performance
+  - rubocop-performance
+<% if use_rails %>
+  - rubocop-rails
+<% end %>
 
 inherit_gem:
   standard: config/base.yml
-
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+<% if use_rails %>
+  standard-rails: config/base.yml
+<% end %>
 <% if use_rspec %>
+
 inherit_from:
   - .rubocop/rspec.yml
 <% end %>
@@ -22,7 +36,7 @@ AllCops:
   DisplayCopNames: true
   SuggestExtensions: false
   NewCops: disable
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.0
 
 Style/FrozenStringLiteralComment:
   Enabled: true

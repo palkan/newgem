@@ -73,10 +73,8 @@ inside(root_dir) do
     end
 
     if use_rails
-      file "gemfiles/rails6.gemfile", <%= code("gemfiles/rails6.gemfile") %>
-      file "gemfiles/rails70.gemfile", <%= code("gemfiles/rails70.gemfile") %>
-      file "gemfiles/rails71.gemfile", <%= code("gemfiles/rails71.gemfile") %>
       file "gemfiles/rails7.gemfile", <%= code("gemfiles/rails7.gemfile") %>
+      file "gemfiles/rails8.gemfile", <%= code("gemfiles/rails8.gemfile") %>
       file "gemfiles/railsmain.gemfile", <%= code("gemfiles/railsmain.gemfile") %>
     end
 

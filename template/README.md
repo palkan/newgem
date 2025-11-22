@@ -32,9 +32,9 @@ gem "<%= name %>"
 
 ### Supported Ruby versions
 
-- Ruby (MRI) >= 2.7.0
+- Ruby (MRI) >= 3.0
 <% if use_jruby %>
-- JRuby >= 9.3.0
+- JRuby ~> 10.0
 <% end %>
 
 ## Usage

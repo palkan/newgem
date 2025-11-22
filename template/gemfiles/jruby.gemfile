@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 <% if use_rails %>
-gem "rails", "~> 6.0"
+gem "rails", "~> 8.0"
 <% end %>
 
 gemspec path: ".."
