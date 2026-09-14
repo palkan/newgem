@@ -27,12 +27,15 @@ Thumbs.db
 .bundle/
 log/*.log
 pkg/
+/coverage/
+/.yardoc
+/doc/
 spec/dummy/db/*.sqlite3
 spec/dummy/db/*.sqlite3-journal
 spec/dummy/tmp/
 
 Gemfile.lock
-Gemfile.local
+Gemfile.local*
 .rspec-local
 .ruby-version
 *.gem

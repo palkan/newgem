@@ -1,6 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/<%= name %>.svg)](https://rubygems.org/gems/<%= name %>)
 <% if use_ga %>
-[![Build](https://github.com/<%= repo_name %>/workflows/Build/badge.svg)](https://github.com/palkan/<%= name %>/actions)
+[![Build](https://github.com/<%= repo_name %>/workflows/Build/badge.svg)](https://github.com/<%= repo_name %>/actions)
 <% if use_jruby %>
 [![JRuby Build](https://github.com/<%= repo_name %>/workflows/JRuby%20Build/badge.svg)](https://github.com/<%= repo_name %>/actions)
 <% end %>

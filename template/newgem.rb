@@ -16,6 +16,7 @@ inside(root_dir) do
 
   # Base files
   file ".gitignore", <%= code(".gitignore") %>
+  file ".gitattributes", <%= code(".gitattributes") %>
   file ".gem_release.yml", <%= code(".gem_release.yml") %>
   file "CHANGELOG.md", <%= code("CHANGELOG.md") %>
   file "Gemfile", <%= code("Gemfile") %>
@@ -81,6 +82,7 @@ inside(root_dir) do
     if use_rails
       file "gemfiles/rails7.gemfile", <%= code("gemfiles/rails7.gemfile") %>
       file "gemfiles/rails8.gemfile", <%= code("gemfiles/rails8.gemfile") %>
+      file "gemfiles/rails80.gemfile", <%= code("gemfiles/rails80.gemfile") %>
       file "gemfiles/railsmain.gemfile", <%= code("gemfiles/railsmain.gemfile") %>
     end
 

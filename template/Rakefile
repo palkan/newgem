@@ -16,6 +16,15 @@ Rake::TestTask.new(:test) do |t|
   t.warning = false
 end
 
+namespace :test do
+  desc "Run each test file in a separate process"
+  task :isolated do
+    Dir.glob("test/**/*_test.rb").all? do |file|
+      sh(Gem.ruby, "-I#{__dir__}/lib:#{__dir__}/test", file)
+    end || raise("Failures")
+  end
+end
+
 <% end %>
 begin
   require "rubocop/rake_task"

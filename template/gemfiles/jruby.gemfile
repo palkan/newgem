@@ -3,5 +3,6 @@ source "https://rubygems.org"
 <% if use_rails %>
 gem "rails", "~> 8.0"
 <% end %>
+gem "rdoc", "< 8"
 
 gemspec path: ".."

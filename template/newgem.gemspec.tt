@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name = "<%= name %>"
   s.version = <%= module_name %>::VERSION
   s.authors = ["<%= author %>"]
-  s.email = ["<%= author %>"]
+  s.email = ["<%= email %>"]
   s.homepage = "https://github.com/<%= repo_name %>"
   s.summary = "Example description"
   s.description = "Example description"
@@ -16,15 +16,16 @@ Gem::Specification.new do |s|
     "changelog_uri" => "https://github.com/<%= repo_name %>/blob/master/CHANGELOG.md",
     "documentation_uri" => "https://github.com/<%= repo_name %>",
     "homepage_uri" => "https://github.com/<%= repo_name %>",
-    "source_code_uri" => "https://github.com/<%= repo_name %>"
+    "source_code_uri" => "https://github.com/<%= repo_name %>",
+    "rubygems_mfa_required" => "true"
   }
 
   s.license = "MIT"
 
 <% if use_ruby_next %>
-  s.files = Dir.glob("lib/**/*") + Dir.glob("lib/.rbnext/**/*") + Dir.glob("bin/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
+  s.files = Dir.glob("lib/**/*") + Dir.glob("lib/.rbnext/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
 <% else %>
-  s.files = Dir.glob("lib/**/*") + Dir.glob("bin/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
+  s.files = Dir.glob("lib/**/*") + %w[README.md LICENSE.txt CHANGELOG.md]
 <% end %>
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 2.7"
@@ -61,9 +62,9 @@ Gem::Specification.new do |s|
   # When gem is installed from source, we add `ruby-next` as a dependency
   # to auto-transpile source files during the first load
   if ENV["RELEASING_GEM"].nil? && File.directory?(File.join(__dir__, ".git"))
-    s.add_runtime_dependency "ruby-next", ">= 0.15.0"
+    s.add_runtime_dependency "ruby-next", "~> 1.2"
   else
-    s.add_dependency "ruby-next-core", ">= 0.15.0"
+    s.add_dependency "ruby-next-core", "~> 1.2"
   end
 <% end %>
 end
