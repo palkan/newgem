@@ -1,0 +1,8 @@
+---
+name: <%= name %>
+description: TBD. Describe what the skill does and when an agent must use it (e.g., "Use when the user asks to ...").
+---
+
+# <%= human_name %>
+
+TBD

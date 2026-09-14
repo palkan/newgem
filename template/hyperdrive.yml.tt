@@ -1,0 +1,6 @@
+# Rails Hyperdrive manifest.
+# See https://github.com/rails-hyperdrive/rails-hyperdrive/blob/main/docs/COMPANION_GEMS.md
+#
+# Skills install only into apps that bundle every target gem listed below.
+gems:
+  - <%= name %>

@@ -28,6 +28,23 @@ Gem::Specification.new do |s|
 <% end %>
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 2.7"
+<% if use_hyperdrive %>
+
+<% if hyperdrive_skill %>
+  # Rails Hyperdrive (https://github.com/rails-hyperdrive/rails-hyperdrive) metadata.
+  # Targets are the gems that make the skills relevant to an app ("*" for any app).
+  s.metadata["hyperdrive_targets"] = "<%= hyperdrive_targets %>"
+  s.metadata["hyperdrive_artifacts"] = "skill"
+  s.files += Dir.glob("skills/**/*") + %w[hyperdrive.yml]
+<% else %>
+  # Uncomment to make skills (skills/<name>/SKILL.md, gated via hyperdrive.yml)
+  # discoverable by Rails Hyperdrive (https://github.com/rails-hyperdrive/rails-hyperdrive).
+  # Targets are the gems that make the skills relevant to an app ("*" for any app).
+  # s.metadata["hyperdrive_targets"] = "<%= hyperdrive_targets %>"
+  # s.metadata["hyperdrive_artifacts"] = "skill"
+  # s.files += Dir.glob("skills/**/*") + %w[hyperdrive.yml]
+<% end %>
+<% end %>
 
   s.add_development_dependency "bundler", ">= 1.15"
 <% if use_rails %>

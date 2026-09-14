@@ -1,0 +1,7 @@
+use_hyperdrive = yes? "Would you like to configure Rails Hyperdrive skill assets (so AI agents can discover and install skills shipped with your gem)?"
+hyperdrive_skill = false
+
+if use_hyperdrive
+  hyperdrive_targets = use_rails ? "railties" : "*"
+  hyperdrive_skill = yes? "Would you like to add a dummy skill (skills/#{name}/SKILL.md)?"
+end

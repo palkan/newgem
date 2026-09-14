@@ -5,6 +5,7 @@ say "👋 Let's scaffold your new gem!\n"
 <%= include "gem_details" %>
 <%= include "rails_details" %>
 <%= include "ruby_next_details" %>
+<%= include "hyperdrive_details" %>
 <%= include "github_details" %>
 <%= include "ci_details" %>
 <%= include "docs_details" %>
@@ -48,6 +49,11 @@ inside(root_dir) do
   if use_ruby_next
     file ".rbnextrc", <%= code(".rbnextrc") %>
     file "Makefile", <%= code("Makefile") %>
+  end
+
+  if hyperdrive_skill
+    file "hyperdrive.yml", <%= code("hyperdrive.yml") %>
+    file "skills/#{name}/SKILL.md", <%= code("skills/SKILL.md") %>
   end
 
   if use_rspec

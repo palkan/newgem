@@ -8,6 +8,7 @@ This repository contains an application template to create a new Ruby gem with a
 - CI configuration (GitHub Actions only for now).
 - Documentation linting tools (Markdown lint, Forspell, RuboCop Markdown, Lychee).
 - [Ruby Next][] configuration.
+- [Rails Hyperdrive][] skill assets (gemspec metadata and a dummy skill).
 
 You can pick what you want during the installation process.
 
@@ -26,3 +27,4 @@ What's gonna be the name of your gem?
 
 [Ruby Bytes]: https://github.com/palkan/rbytes
 [Ruby Next]: https://github.com/ruby-next/ruby-next
+[Rails Hyperdrive]: https://github.com/rails-hyperdrive/rails-hyperdrive

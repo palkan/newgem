@@ -41,6 +41,12 @@ gem "<%= name %>"
 
 TBD
 
+<% if hyperdrive_skill %>
+## Agent skills
+
+This gem ships AI agent skills under `skills/`. Use [Rails Hyperdrive](https://github.com/rails-hyperdrive/rails-hyperdrive) to install them into your application.
+
+<% end %>
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/<%= repo_name %>](https://github.com/<%= repo_name %>).
